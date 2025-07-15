@@ -16,7 +16,7 @@ const connection: ConnectionObject = {}
 async function dbConnect(): Promise<void>{
     if (!connection.isConnected) {
         console.log("Already connected to database");
-        return;
+        return;;
         /*
         If you're already connected, don’t connect again.
         Saves memory and avoids duplicate connections.
