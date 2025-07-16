@@ -43,7 +43,7 @@ export async function POST(request: Request) {//right wala Datatype hai or left 
                     message: "User already exists with this email"
                 }, { status: 500 })
             }
-            else {//user exited hai or verfied nhi hai 
+            else {//user exited hai or verfied nhi hai to wo ab verify hona chhtha hai apne creditias ke sath
                 const hashedpassword = await bcrypt.hash(password, 10)
                 existingUserByEmail.password = hashedpassword
                 existingUserByEmail.verifyCode = verifyCode
